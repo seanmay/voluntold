@@ -4,7 +4,6 @@ import selectors from "./selectors";
 import creators from "./creators";
 
 import SkillsPage from "./skills";
-console.log(SkillsPage);
 
 const SkillsScene = connect(selectors, creators)(SkillsPage);
 export default SkillsScene;

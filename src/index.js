@@ -6,18 +6,12 @@ import { Provider } from "react-redux";
 import { Router, Route, browserHistory } from "react-router-redux";
 import { createStore } from "redux";
 
-
-import skills from "./scenes/skills/reducers";
+import { combineReducers } from "./lib/redux-helpers";
+import skillsPage from "./scenes/skills/reducers";
 
 import './index.css';
 
-
-
-const store = createStore((state = {}, action) => ({
-  skillsPage: skills(state.skillsPage, action, state)
-}));
-
-// const store = createStore((state, action) => state);
+const store = createStore(combineReducers({ skillsPage }), {});
 
 ReactDOM.render(
   <Provider store={store}>

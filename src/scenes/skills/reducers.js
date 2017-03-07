@@ -1,18 +1,10 @@
+import { buildStrategy } from "../../lib/redux-helpers";
 import Skills from "./actions";
-
-
-const buildStrategy = (emptyState, options) => (state = emptyState, action, global) => {
-  return action.type in options
-    ? options[action.type](state, action, global)
-    : state;
-};
-
 
 const emptyState = () => ({
   input: "",
   skills: []
 });
-
 
 const addSkill = (state, action) => ({
   ...state,
@@ -28,7 +20,6 @@ const updateInputText = (state, action) => ({
   ...state,
   input: action.payload
 });
-
 
 export default buildStrategy(emptyState(), {
   [Skills.ADD]: addSkill,
