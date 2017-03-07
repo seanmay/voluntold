@@ -1,0 +1,11 @@
+export const SKILLS_ADD = "Skills.ADD";
+export const SKILLS_REMOVE = "Skills.REMOVE";
+export const SKILLS_UPDATE = "Skills.UPDATE";
+export const SKILLS_UPDATE_INPUT_TEXT = "Skills.UPDATE_INPUT_TEXT";
+
+export default {
+  ADD: SKILLS_ADD,
+  REMOVE: SKILLS_REMOVE,
+  UPDATE: SKILLS_UPDATE,
+  UPDATE_INPUT_TEXT: SKILLS_UPDATE_INPUT_TEXT,
+};
